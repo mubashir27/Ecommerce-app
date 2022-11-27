@@ -3,26 +3,24 @@ import {Card} from 'react-bootstrap'
 const Products = ({product}) => {
   return (
     <React.Fragment>
-        {/* <div>
-            <img src={product.image} alt="" />
-        </div> */}
-    <Card style={{ width: '18rem' }}>
+    <Card style={{ width: '18rem', height: '25rem' }} className='mb-3' >
         <a href={`/product/${product._id}`}>            
       <Card.Img variant="top" src={product.image} />
         </a>
-
-      <Card.Body>
-        <Card.Title>{product.name}</Card.Title>
+      <Card.Body className='d-flex flex-column justify-content-between' >
+        <div className="">
+        <Card.Title as='div' >{product.name}</Card.Title>
         <Card.Text>
           {product.rating} from {product.numReviews} reviews
         </Card.Text>
-        <Card.Text as='h3' >
+        </div>
+        <div className="">
+        <Card.Text as='h3' className='mb-auto' >
             ${product.price}
         </Card.Text>
-        {/* <Button variant="primary">Go somewhere</Button> */}
+        </div>
       </Card.Body>
     </Card>
- 
     </React.Fragment>
   )
 }

@@ -7,7 +7,6 @@ import products from '../products'
 const HomeScreens = () => {
   return (
     <React.Fragment>
-    <div>HomeScreens</div>
     <Row>
         {
             products.map((m) => (
