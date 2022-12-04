@@ -6,7 +6,7 @@ const Products = ({ product }) => {
   return (
     <React.Fragment>
       <Card style={{ width: "18rem", height: "25rem" }} className="mb-3">
-        <Link to={`/product/${product._id}`}>
+        <Link to={`/products/${product._id}`}>
           <Card.Img variant="top" src={product.image} />
         </Link>
         <Link to={`/product/${product._id}`} style={{ textDecoration: 'none' }} >
